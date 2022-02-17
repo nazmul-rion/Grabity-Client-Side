@@ -61,7 +61,7 @@ const FooterSection = () => {
 
             {/* 3rd Part */}
 
-            <div className="d-flex justify-content-center py-3">
+            <div className="d-flex flex-column flex-md-row justify-content-center py-3">
                 <Link className='footerLink d-block px-4' to="/">Conditions of Use</Link>
                 <Link className='footerLink d-block px-4' to="/">Privacy Notice</Link>
                 <Link className='footerLink d-block px-4' to="/">Interest-Based Ads</Link>
