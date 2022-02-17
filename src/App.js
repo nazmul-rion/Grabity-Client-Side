@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import FooterSection from './Components/FooterSection/FooterSection';
 import NavigationBar from './Components/NavigationBar/NavigationBar';
 import SideMenu from './Components/SideMenu/SideMenu';
 import LandingPage from './Pages/LandingPage/LandingPage';
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/productdetails" element={<ProductDetailsPage />} />
       </Routes>
+      <FooterSection />
     </div>
   );
 }

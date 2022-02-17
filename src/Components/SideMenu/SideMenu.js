@@ -10,14 +10,14 @@ const SideMenu = () => {
             <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                 <img src={menubaricon} alt="" />
             </span>
-            <div class="offcanvas offcanvas-start slidebar" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+            <div className="offcanvas offcanvas-start slidebar" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
 
                     </h5>
 
                 </div>
-                <div class="offcanvas-body">
+                <div className="offcanvas-body">
                     <p>
 
                     </p>

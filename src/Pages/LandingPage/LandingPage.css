@@ -1,0 +1,10 @@
+.ShopByCategory h4{
+font-size: 25px;
+}
+
+.shopCategoryCard{
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid rgb(134, 131, 131);
+    overflow-y: hidden;
+}

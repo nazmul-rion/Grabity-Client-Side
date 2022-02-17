@@ -1,0 +1,17 @@
+.FooterSection{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.767);
+    font-family: 'Roboto';
+}
+
+.backontopbtn{
+    width: 100%;
+    background-color: #F3970C;
+    border: none;
+    padding: 5px;
+}
+
+.footerLink{
+text-decoration: none;
+color: rgba(255, 255, 255, 0.767);
+}

@@ -27,7 +27,7 @@ const NavigationBar = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <div className='searchbox my-2' role="search">
-                                <input className='searchinput' id="search" type="search" placeholder="Search anything" autofocus required />
+                                <input className='searchinput' id="search" type="search" placeholder="Search anything" autoFocus required />
                                 <button className='searchbtn' type="submit">Go</button>
                             </div>
                         </Nav>
@@ -37,7 +37,7 @@ const NavigationBar = () => {
                             <Nav.Link className='mx-2' >Returns & <br></br> Orders</Nav.Link>
                             <Nav.Link className='mx-3' >
                                 <span className='cartCounter'>5</span>
-                                <span><img src={cart} alt="" srcset="" /></span>
+                                <span><img src={cart} alt="" srcSet="" /></span>
                                 <span href="#deasets">
                                     Cart
                                 </span>

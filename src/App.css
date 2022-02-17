@@ -3,14 +3,38 @@
     padding: 0;
 }
 .sidebar{
+    height: 50px;
+    display: flex;
+    align-items: center;
     background-color: black;
 }
 
-.socialbutton{
+
+.facebookbtn{
+    border-radius: 5px;
     padding: 5px 10px;
-    border: 1px solid black;
+    border: 1px solid #4050aa;
     margin: 5px;
+    background-color: #4B5EC7;
+    color: white;
 }
-hr{
+.googlebtn{
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #9a9c6a;
+    margin: 5px;
+    background-color: #b2b87d;
+    color: rgb(255, 255, 255);
+}
+.twitterbtn{
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #378cbd;
+    margin: 5px;
+    background-color: #46B5F3;
+    color: white;
+}
+.orhr{
     width: 100px;
 }
+
