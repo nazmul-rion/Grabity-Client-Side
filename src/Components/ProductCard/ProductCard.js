@@ -5,34 +5,53 @@ import productPhoto from '../../images/iphone.png'
 import Rating from 'react-rating'
 
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+
+    const { _id, ProductName, ProductPhoto, CategoryName, SubCategory, Brand, CurrentPrice, PreviousPrice, ProductRating, NumberOfRaters, TotalUnits, SoldUnits } = props.products;
+
+
+
     return (
-        <div>
-
-            <div class="ProductCard">
-
-                <div class="ProductCardImage">
-                    <img src={productPhoto} alt="mouse corsair" class="mouse" />
+        <div class="col ProductCard">
+            <div class="card">
+                <div className="productImage">
+                    <img src={ProductPhoto} class=" card-img-top" alt={ProductName} />
                 </div>
+                <div class="card-body">
+                    <span className='productCategoryName'>{CategoryName}/{SubCategory}/{Brand}</span>
 
-                <div class="ProductCardContainer">
-                    <h2 className='text-white'>Brand and Model Name</h2>
-                    <p className='text-light text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, minima.</p>
-                    <h4 className='text-info'>Rating:
-                        <Rating
-                            initialRating={3.5}
-                            emptySymbol="ratingEmpty fa-solid fa-star"
-                            fullSymbol="ratingFull fa-solid fa-star"
-                            readonly
-                        /> <small>(3.5)</small>
-                    </h4>
-                    <p class="ProductCardPrice">Price: ৳29685 <strike className="text-danger">৳35560</strike> </p>
-                    <h5 class="text-white">Available Colors: <small>Red Blue Golden</small></h5>
-                    <Link to="/test" class="buynowbtn">Buy Now</Link>
+                    <div className="row justify-content-around align-items-center">
+
+                        <div className='col-md-8 border-end border-dark border-2'>
+                            <div className="productName">
+                                {ProductName}
+                            </div>
+
+                            <div className="productPrice">
+                                ৳{CurrentPrice}
+                            </div>
+
+                            <div className="productRating">
+                                <Rating
+                                    initialRating={ProductRating}
+                                    emptySymbol="ratingEmpty fa-solid fa-star"
+                                    fullSymbol="ratingFull fa-solid fa-star"
+                                    readonly
+                                /> <small>{ProductRating} ({NumberOfRaters})</small>
+                            </div>
+                        </div>
+
+                        <div className='col-md-4'>
+                            <div className="productPreviousPrice">
+                                ৳<strike>{PreviousPrice}</strike>
+                                <br />
+                                <span style={{ fontSize: "10px" }}>Previous Price</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-
             </div>
-
         </div>
     )
 }

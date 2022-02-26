@@ -1,10 +1,38 @@
-.ShopByCategory h4{
-font-size: 25px;
+.ShopByCategoryTitle{
+    font-size: 2rem;
+opacity: 58%;
+color: #000000;
+font-weight: 400;
+}
+
+.orangehr{
+    color: #F3970C;
+    opacity: 1;
+}
+.catName{
+font-size: 23px;
+opacity: 58%;
+color: #000000;
+font-weight: 400;
 }
 
 .shopCategoryCard{
-    max-width: 300px;
-    max-height: 300px;
-    border: 2px solid rgb(134, 131, 131);
+    min-width: 250px;
+    min-height: 300px;
+    border-radius: 10px;
     overflow-y: hidden;
+    background-color: #F6F6F6;
 }
+
+@media only screen and (max-width: 600px) {
+    .shopCategoryCard {
+        min-width: 150px;
+        min-height:150px;
+        flex-direction: column;
+    }
+
+    .card-img{
+height: 100px;
+width: 100px;
+    }
+  }

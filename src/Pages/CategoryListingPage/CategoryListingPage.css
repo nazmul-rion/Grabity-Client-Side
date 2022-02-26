@@ -1,0 +1,20 @@
+.CategoryListingPage{
+    background-color: black;
+    min-height: 100vh;
+    color: white;
+    
+}
+
+.CategoryListingPage h2{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #F3970C;
+    font-weight: 300;
+    opacity: 75%;
+}
+
+.categoryIcon img{
+width:"60px";
+height:"60px";
+
+}

@@ -4,6 +4,7 @@ import FooterSection from './Components/FooterSection/FooterSection';
 import NavigationBar from './Components/NavigationBar/NavigationBar';
 import ProductCard from './Components/ProductCard/ProductCard';
 import SideMenu from './Components/SideMenu/SideMenu';
+import CategoryListingPage from './Pages/CategoryListingPage/CategoryListingPage';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import ProductDetailsPage from './Pages/ProductDetailsPage/ProductDetailsPage';
 
@@ -12,13 +13,12 @@ function App() {
     <div className="App">
 
       <NavigationBar />
-      <div className="sidebar">
-        <SideMenu />
-      </div>
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/test" element={<ProductCard />} />
+        <Route path="/allCategories" element={<CategoryListingPage />} />
         <Route path="/productdetails" element={<ProductDetailsPage />} />
+        <Route path="/test" element={<ProductCard />} />
       </Routes>
       <FooterSection />
     </div>

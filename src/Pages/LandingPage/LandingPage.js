@@ -1,4 +1,5 @@
 import React from 'react'
+import SideMenu from '../../Components/SideMenu/SideMenu'
 import BannerSection from './BannerSection'
 import FeatureProductSection from './FeatureProductSection'
 import ShopByCategory from './ShopByCategory'
@@ -6,7 +7,9 @@ import ShopByCategory from './ShopByCategory'
 const LandingPage = () => {
     return (
         <div>
-
+            <div className="sidebar">
+                <SideMenu />
+            </div>
             <div className="container-fluid">
                 <BannerSection />
             </div>
