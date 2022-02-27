@@ -38,7 +38,13 @@
     color: white;
 }
 .orhr{
-    width: 100px;
+    flex: 1;
+}
+
+.orangehr{
+    flex: 1;
+    color: #F3970C;
+    opacity: 1;
 }
 
 .buynowbtn{

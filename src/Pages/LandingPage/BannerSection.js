@@ -49,12 +49,15 @@ const BannerSection = () => {
                         We welcome <br /> you to <br /> our community <br /> driven market
                     </h3>
                     <input className='form-control border border-3 m-2 px-2' type="text" placeholder='Email Address' />
-                    <div className="d-flex align-items-center justify-content-center">
-                        <div className='mx-2'><hr className='orhr' /></div>
 
-                        <div>OR</div>
-                        <div className='mx-2'><hr className='orhr' /></div>
+                    <div className="container">
+                        <div className='d-flex justify-content-between align-items-center'>
+                            <hr size="5" className='orhr' />
+                            <span className='px-2'>OR</span>
+                            <hr size="5" className='orhr' />
+                        </div>
                     </div>
+
                     <div className="d-flex my-2">
                         <button className='facebookbtn'>
                             <div className="d-flex align-items-center">

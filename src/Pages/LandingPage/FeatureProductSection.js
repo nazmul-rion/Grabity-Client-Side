@@ -1,28 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import ProductListApi from '../../Hooks/ProductListApi';
 
 const FeatureProductSection = () => {
 
-    const [products] = ProductListApi();
+    const [products, setProducts] = ProductListApi();
+    const [seeMorePagination, setSeeMorePagination] = useState(8);
+    const seeMoreButtonHandle = () => {
+        setSeeMorePagination(prevValue => prevValue + 8);
+    }
 
     return (
         <div className='FeatureProductSection mx-3'>
             <h4 className='ShopByCategoryTitle'>Explore the latest drops</h4>
-            <hr size="5" className='w-25 orangehr' />
+            <hr size="5" className='w-50 orangehr' />
             <div className="row row-cols-1 row-cols-md-4 g-4">
 
                 {
-                    products.map(SingleProduct => (
+                    products.slice(0, seeMorePagination).map(SingleProduct => (
                         <ProductCard
                             products={SingleProduct}
                             key={SingleProduct._id}>
                         </ProductCard>
                     ))
                 }
-
-
             </div>
+
+            <div className="container py-5">
+                <div className='d-flex justify-content-between align-items-center'>
+                    <hr size="5" className='orangehr' />
+                    <button className='seeMoreBtn' onClick={seeMoreButtonHandle}>See More</button>
+                    <hr size="5" className='orangehr' />
+                </div>
+            </div>
+
+
         </div>
     )
 }

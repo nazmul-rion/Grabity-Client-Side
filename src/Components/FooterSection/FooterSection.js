@@ -36,10 +36,10 @@ const FooterSection = () => {
 
                 <div className="col-md-3">
                     <h4>Follow Us on</h4>
-                    <a href='https://www.facebook.com/' target="_black" className='footerLink fs-3 pe-2'><i class="fa-brands fa-facebook"></i></a>
-                    <a href='https://www.twitter.com/' target="_black" className='footerLink fs-3 px-2'><i class="fa-brands fa-twitter"></i></a>
-                    <a href='https://www.github.com/' target="_black" className='footerLink fs-3 px-2'><i class="fa-brands fa-github-alt"></i></a>
-                    <a href='https://www.instagram.com/' target="_black" className='footerLink fs-3 ps-2'><i class="fa-brands fa-instagram"></i></a>
+                    <a href='https://www.facebook.com/' target="_black" className='footerLink fs-3 pe-2'><i className="fa-brands fa-facebook"></i></a>
+                    <a href='https://www.twitter.com/' target="_black" className='footerLink fs-3 px-2'><i className="fa-brands fa-twitter"></i></a>
+                    <a href='https://www.github.com/' target="_black" className='footerLink fs-3 px-2'><i className="fa-brands fa-github-alt"></i></a>
+                    <a href='https://www.instagram.com/' target="_black" className='footerLink fs-3 ps-2'><i className="fa-brands fa-instagram"></i></a>
                 </div>
 
                 <div className="col-md-3">

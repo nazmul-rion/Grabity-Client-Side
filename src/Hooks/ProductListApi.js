@@ -4,7 +4,7 @@ import { useState } from "react";
 const ProductListApi = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://192.168.0.100:7000/products')
+        fetch('https://grabity-grabity.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [products]);

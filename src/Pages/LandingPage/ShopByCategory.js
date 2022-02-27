@@ -47,7 +47,7 @@ const ShopByCategory = () => {
     return (
         <div className='ShopByCategory mx-3'>
             <h4 className='ShopByCategoryTitle'>Shop By Category</h4>
-            <hr size="5" className='w-25 orangehr' />
+            <hr size="5" className='w-50 orangehr' />
 
             <div className="container-fluid">
                 <Slider {...settings}>

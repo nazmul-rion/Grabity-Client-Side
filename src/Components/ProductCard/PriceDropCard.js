@@ -6,13 +6,13 @@ import './ProductCard.css'
 
 const PriceDropCard = () => {
     return (
-        <div class="ProductCard">
+        <div className="ProductCard">
 
-            <div class="ProductCardImage">
-                <img src={productPhoto} alt="product photo" class="productPhoto" />
+            <div className="ProductCardImage">
+                <img src={productPhoto} alt="product photo" className="productPhoto" />
             </div>
 
-            <div class="ProductCardContainer">
+            <div className="ProductCardContainer">
                 <h2 className='text-white'>Brand and Model Name</h2>
                 <p className='text-light text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, minima.</p>
                 <h4 className='text-info'>Rating:
@@ -39,11 +39,11 @@ const PriceDropCard = () => {
                     </div>
                 </div>
 
-                <h5 class="text-white">Available Colors: <small>Red Blue Golden</small></h5>
-                <Link to="/test" class="buynowbtn">View Product</Link>
+                <h5 className="text-white">Available Colors: <small>Red Blue Golden</small></h5>
+                <Link to="/test" className="buynowbtn">View Product</Link>
 
             </div>
-            <Link to="/totalcomment" class="text-muted text-decoration-none float-end me-3 mb-3">Total Comments 5</Link>
+            <Link to="/totalcomment" className="text-muted text-decoration-none float-end me-3 mb-3">Total Comments 5</Link>
 
         </div>
     )

@@ -39,12 +39,29 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.soldunit{
+  font-size: 10px;
+  color: #000000;
+  opacity:  0.58;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
 .ratingEmpty{
-color: rgb(136, 227, 255);
+color: black;
 font-size: 14px;
 }
 
 .ratingFull{
   color: black;
   font-size: 14px;
+}
+
+.seeMoreBtn{
+  background-color: #F3970C;
+  border: 7px solid #F3970C;
+  font-size: 1.18rem;
+  padding: 2px 10px;
+  font-family: 'Sarabun', sans-serif;
+  color: white;
+
 }
