@@ -17,7 +17,7 @@ const ProductCard = (props) => {
 
                 <div className="d-flex justify-content-between align-items-center">
                     <div>
-                        <i class="fa-solid fa-heart text-danger fs-4 p-2"></i>
+                        <i className="fa-solid fa-heart text-danger fs-4 p-2"></i>
                     </div>
                     <div>
                         <img src={bookmarkIcon} alt="" className='p-2' />

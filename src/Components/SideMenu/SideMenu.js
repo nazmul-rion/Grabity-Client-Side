@@ -31,9 +31,11 @@ const SideMenu = () => {
 
                     {
                         departmentList.slice(0, seeMorePagination).map(SingleDepartment => (
-                            <h6>
-                                {SingleDepartment.DepartmentName}
-                            </h6>
+                            <div key={SingleDepartment._id} >
+                                <h6>
+                                    {SingleDepartment.DepartmentName}
+                                </h6>
+                            </div>
                         ))
                     }
 
@@ -57,7 +59,7 @@ const SideMenu = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 
