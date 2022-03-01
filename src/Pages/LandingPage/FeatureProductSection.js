@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import ProductCard from '../../Components/ProductCard/ProductCard';
 import ProductListApi from '../../Hooks/ProductListApi';
 
+
 const FeatureProductSection = () => {
 
-    const [products, setProducts] = ProductListApi();
+    const [products] = ProductListApi();
     const [seeMorePagination, setSeeMorePagination] = useState(8);
     const seeMoreButtonHandle = () => {
         setSeeMorePagination(prevValue => prevValue + 8);

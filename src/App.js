@@ -18,7 +18,6 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/allCategories" element={<CategoryListingPage />} />
         <Route path="/productdetails" element={<ProductDetailsPage />} />
-        <Route path="/test" element={<ProductCard />} />
       </Routes>
       <FooterSection />
     </div>

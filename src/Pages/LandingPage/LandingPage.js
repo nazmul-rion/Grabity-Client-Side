@@ -1,4 +1,5 @@
 import React from 'react'
+import ExplorerMoreSection from '../../Components/ExplorerMoreSection/ExplorerMoreSection'
 import SideMenu from '../../Components/SideMenu/SideMenu'
 import BannerSection from './BannerSection'
 import FeatureProductSection from './FeatureProductSection'
@@ -26,6 +27,9 @@ const LandingPage = () => {
 
             <div className="container-fluid my-3">
                 <FeatureProductSection />
+            </div>
+            <div className="container-fluid my-3">
+                <ExplorerMoreSection />
             </div>
 
         </div>
