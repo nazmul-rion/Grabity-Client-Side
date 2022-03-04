@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductCard.css'
 import Rating from 'react-rating'
 import inboxIcon from '../../images/inboxIcon.svg'
+import logo from '../../images/logo2.png'
 import bookmarkIcon from '../../images/bookmarkIcon.svg'
 import { Link } from 'react-router-dom'
 
@@ -16,7 +17,10 @@ const ProductCard = (props) => {
 
                 <div className="d-flex justify-content-between align-items-center">
                     <div>
-                        <i className="fa-solid fa-heart text-danger fs-4 p-2"></i>
+                        <img style={{
+                            width: "35px",
+                            height: "37px"
+                        }} className="p-2 img-fluid" src={logo} alt="" />
                     </div>
                     <div>
                         <img src={bookmarkIcon} alt="" className='p-2' />
@@ -52,9 +56,8 @@ const ProductCard = (props) => {
                             </div>
 
                             <div className='col-md-4'>
-                                <div className="productPreviousPrice">
-                                    ৳<strike>{PreviousPrice}</strike>
-                                    <br />
+                                <div className="productPreviousPrice d-flex flex-column">
+                                    <span> ৳<strike>{PreviousPrice}</strike></span>
                                     <span style={{ fontSize: "10px" }}>Previous Price</span>
                                 </div>
                             </div>
