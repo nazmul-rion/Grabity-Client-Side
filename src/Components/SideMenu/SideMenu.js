@@ -34,6 +34,7 @@ const SideMenu = () => {
                             <div key={SingleDepartment._id} >
                                 <h6>
                                     {SingleDepartment.DepartmentName}
+
                                 </h6>
                             </div>
                         ))
@@ -58,6 +59,10 @@ const SideMenu = () => {
 
                 </div>
             </div>
+
+            <Link className='mx-3 text-light sidemenunav' to='/exploreproducts' >Explore New Products</Link>
+            <Link className='mx-3 text-light sidemenunav' to='/todaysdeals' >Today's Deals</Link>
+            <Link className='mx-3 text-light sidemenunav' to='/latestdrops' >Latest Drop</Link>
 
         </div >
     )

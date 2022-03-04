@@ -21,3 +21,12 @@ width: 350px;
     color: #F3970C;
     opacity: 0.74;
 }
+
+.sidemenunav{
+        text-decoration: none;
+
+}
+.sidemenunav:hover{
+        border-bottom: 3px solid #F3970C;
+
+}
