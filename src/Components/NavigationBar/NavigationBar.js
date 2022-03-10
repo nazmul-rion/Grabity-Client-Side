@@ -5,9 +5,17 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import logo from '../../images/logo.png'
 import cart from '../../images/cart.svg'
 import catIcon from '../../images/CategoryIcon.svg'
+import useCart from '../../Context/CartManagement/useCart'
+import SideCart from '../SideCart/SideCart'
 
 const NavigationBar = () => {
+
     let navigate = useNavigate();
+
+    const { cartState, cartDispatch } = useCart();
+
+
+
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#E5E5E5" }} variant="light">
@@ -41,13 +49,15 @@ const NavigationBar = () => {
                             <Nav.Link className='mx-2' >Select <br /> Language</Nav.Link>
                             <Nav.Link className='mx-2' >Accounts <br />Log in or Sign up</Nav.Link>
                             <Nav.Link className='mx-2' >Returns & <br></br> Orders</Nav.Link>
-                            <Nav.Link className='mx-3' >
-                                <span className='cartCounter'>5</span>
+                            <Nav.Link className='mx-3' data-bs-toggle="offcanvas" data-bs-target="#SideCart" aria-controls="offcanvasRight" >
+                                <span className='cartCounter'>{cartState.cartList.length}</span>
                                 <span><img src={cart} alt="" srcSet="" /></span>
-                                <span href="#deasets">
+                                <span >
                                     Cart
                                 </span>
                             </Nav.Link>
+
+
 
 
                         </Nav>
@@ -55,6 +65,7 @@ const NavigationBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <SideCart />
         </div>
     )
 }

@@ -1,0 +1,14 @@
+
+.productPhoto{
+    height: 400px;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+.productPhoto{
+    height: 300px;
+}
+
+}

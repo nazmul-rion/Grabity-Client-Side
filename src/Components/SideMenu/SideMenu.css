@@ -3,30 +3,30 @@ width: 350px;
 
 }
 
-.offcanvas-header{
+.SideMenu .offcanvas-header{
     background-color: #F3970C;
     text-align: center;
     color: white;
 }
 
-.offcanvas-header h4,.offcanvasSigninBtn{
+.SideMenu .offcanvas-header h4,.offcanvasSigninBtn{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: white;
     text-decoration: none;
 }
 
-.offcanvas-body h5{
+.SideMenu .offcanvas-body h5{
     font-family: 'Roboto', sans-serif;
     color: #F3970C;
     opacity: 0.74;
 }
 
-.sidemenunav{
+.SideMenu .sidemenunav{
         text-decoration: none;
 
 }
-.sidemenunav:hover{
+.SideMenu .sidemenunav:hover{
         border-bottom: 3px solid #F3970C;
 
 }

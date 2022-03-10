@@ -8,12 +8,20 @@ const ProductListApi = () => {
     const [pageSize, setPageSize] = useState(15);
 
     useEffect(() => {
+        let isMounted = true;
         fetch(`https://grabity-grabity.herokuapp.com/products?pageNumber=${pageNumber}&&pageSize=${pageSize}`)
             .then(res => res.json())
             .then(data => {
-                setProducts(data.Product);
-                setTotalProductCount(data.totalProductCount)
+                if (isMounted) {
+                    setProducts(data.Product);
+                    setTotalProductCount(data.totalProductCount)
+                }
+
             });
+        return () => {
+            isMounted = false;
+        };
+
     }, [products, pageNumber]);
 
     return [products, setProducts, pageNumber, setpageNumber, pageSize, setPageSize, totalProductCount, setTotalProductCount];

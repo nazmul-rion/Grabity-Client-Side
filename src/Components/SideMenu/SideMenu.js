@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import DepartmentListApi from '../../Hooks/DepartmentListApi'
 import menubaricon from '../../images/menubar.svg'
+import CustomSpinner from '../Spinner/CustomSpinner'
 import './SideMenu.css'
 const SideMenu = () => {
 
     const [departmentList] = DepartmentListApi();
+
     const [seeMorePagination, setSeeMorePagination] = useState(4);
     const seeAllButtonHandle = () => {
         setSeeMorePagination(departmentList.length);
@@ -14,12 +16,15 @@ const SideMenu = () => {
     const seeLessButtonHandle = () => {
         setSeeMorePagination(4);
     }
+
+
+
     return (
-        <div className='py-2 ps-2'>
-            <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <div className='py-2 ps-2 SideMenu'>
+            <span data-bs-toggle="offcanvas" data-bs-target="#SideMenu" aria-controls="offcanvasWithBothOptions">
                 <img src={menubaricon} alt="" />
             </span>
-            <div className="offcanvas offcanvas-start slidebar" data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div className="offcanvas offcanvas-start slidebar" data-bs-scroll="true" tabIndex="-1" id="SideMenu" aria-labelledby="offcanvasWithBothOptionsLabel">
                 <div className="offcanvas-header justify-content-center align-items-center">
                     <h4 className="text-center" id="offcanvasWithBothOptionsLabel">
                         Hello! <Link className='text-light offcanvasSigninBtn' to='/signin'>Sign In</Link>
@@ -60,7 +65,7 @@ const SideMenu = () => {
                 </div>
             </div>
 
-            <Link className='mx-3 text-light sidemenunav' to='/exploreproducts' >Explore New Products</Link>
+
             <Link className='mx-3 text-light sidemenunav' to='/todaysdeals' >Today's Deals</Link>
             <Link className='mx-3 text-light sidemenunav' to='/latestdrops' >Latest Drop</Link>
 

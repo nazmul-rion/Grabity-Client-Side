@@ -2,9 +2,12 @@ import React from 'react'
 import "./CategoryListingPage.css"
 import catIcon from '../../images/RectanglePIC.png'
 import CategoryListApi from '../../Hooks/CategoryListApi';
+import CustomSpinner from '../../Components/Spinner/CustomSpinner';
 const CategoryListingPage = () => {
 
     const [categories] = CategoryListApi();
+
+
 
     return (
         <div className='CategoryListingPage'>

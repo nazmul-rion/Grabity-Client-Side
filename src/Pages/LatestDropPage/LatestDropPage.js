@@ -5,6 +5,7 @@ import SideMenu from '../../Components/SideMenu/SideMenu'
 import DepartmentListApi from '../../Hooks/DepartmentListApi';
 import ProductListApi from '../../Hooks/ProductListApi';
 import ReactPaginate from 'react-paginate';
+import CustomSpinner from '../../Components/Spinner/CustomSpinner';
 
 const LatestDropPage = () => {
 
@@ -31,6 +32,7 @@ const LatestDropPage = () => {
         setSeeMoreDepPagination(4);
     }
     // DepartmentLis Handle
+
 
 
     return (
