@@ -6,6 +6,7 @@ import FeatureProductSection from './FeatureProductSection'
 import ShopByCategory from './ShopByCategory'
 
 const LandingPage = () => {
+
     return (
         <div>
             <div className="sidebar">

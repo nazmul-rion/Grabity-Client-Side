@@ -14,7 +14,7 @@
     position: absolute;
     border-radius: 50%;
     border-style: solid;
-    animation: animate 3s linear infinite;
+    animation: animate 1s linear infinite;
 }
 
 .loader .face:nth-child(1) {

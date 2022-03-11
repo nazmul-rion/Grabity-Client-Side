@@ -21,10 +21,6 @@ const SideCart = () => {
                 {
                     cartState.cartList.length > 0 ?
 
-
-
-
-
                         cartState.cartList.map(SingleCartProduct => (
                             <SideCartProductList
                                 SingleCartProduct={SingleCartProduct}

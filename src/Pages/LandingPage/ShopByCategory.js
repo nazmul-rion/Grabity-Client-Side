@@ -48,6 +48,11 @@ const ShopByCategory = () => {
         ]
     };
 
+
+
+    if (categories.length <= 0)
+        return <CustomSpinner />
+
     return (
         <div className='ShopByCategory mx-3'>
             <h4 className='ShopByCategoryTitle'>Shop By Category</h4>

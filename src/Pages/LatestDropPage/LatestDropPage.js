@@ -11,8 +11,11 @@ const LatestDropPage = () => {
 
     //Products Handle
     const [products, setProducts, pageNumber, setpageNumber, pageSize, setPageSize, totalProductCount, setTotalProductCount] = ProductListApi();
-    const [ProductpageCount, setProductPageCount] = useState(0);
-    const [ProductOffset, setProductOffset] = useState(0);
+
+
+
+
+
 
     const ProductPageChangeHandle = (e) => {
         setpageNumber(e.selected);
@@ -33,7 +36,8 @@ const LatestDropPage = () => {
     }
     // DepartmentLis Handle
 
-
+    if (products.length <= 0)
+        return <CustomSpinner />
 
     return (
         <div className='LatestDropPage'>

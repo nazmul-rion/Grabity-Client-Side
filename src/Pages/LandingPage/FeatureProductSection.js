@@ -16,6 +16,8 @@ const FeatureProductSection = () => {
     }
 
 
+    if (products.length <= 0)
+        return <CustomSpinner />
 
     return (
         <div className='FeatureProductSection mx-3'>

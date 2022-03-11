@@ -2,16 +2,18 @@ import React from 'react'
 import './CustomSpinner.css'
 const CustomSpinner = () => {
     return (
-        <div className='d-flex justify-content-center p-3'>
-            <div class="loader">
-                <div class="face">
-                    <div class="circle"></div>
+
+        <div className='d-flex justify-content-center align-items-center p-3'>
+            <div className="loader">
+                <div className="face">
+                    <div className="circle"></div>
                 </div>
-                <div class="face">
-                    <div class="circle"></div>
+                <div className="face">
+                    <div className="circle"></div>
                 </div>
             </div>
         </div>
+
     )
 }
 

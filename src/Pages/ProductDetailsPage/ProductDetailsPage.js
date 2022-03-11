@@ -6,6 +6,7 @@ import Slider from 'react-slick/lib/slider';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import useCart from '../../Context/CartManagement/useCart';
 import SingleProductApi from '../../Hooks/SingleProductApi';
+import CustomSpinner from '../../Components/Spinner/CustomSpinner';
 
 
 const ProductDetailsPage = () => {
@@ -31,7 +32,8 @@ const ProductDetailsPage = () => {
     };
 
 
-
+    if (singleProduct.length <= 0)
+        return <CustomSpinner />
 
 
     return (

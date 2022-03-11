@@ -1,6 +1,7 @@
 import React from 'react'
 import useCart from '../../Context/CartManagement/useCart';
 import SingleProductApi from '../../Hooks/SingleProductApi';
+import CustomSpinner from '../Spinner/CustomSpinner';
 
 function SideCartProductList(props) {
 
@@ -9,6 +10,10 @@ function SideCartProductList(props) {
     const { itemId, quantity } = props.SingleCartProduct;
 
     const [singleProduct] = SingleProductApi(itemId);
+
+
+    if (singleProduct.length <= 0)
+        return <CustomSpinner />
 
     return (
         <>
