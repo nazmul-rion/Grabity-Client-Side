@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useCart from '../../Context/CartManagement/useCart';
 import SingleProductApi from '../../Hooks/SingleProductApi';
 import CustomSpinner from '../Spinner/CustomSpinner';
@@ -8,8 +8,22 @@ function SideCartProductList(props) {
     const { cartDispatch } = useCart();
 
     const { itemId, quantity } = props.SingleCartProduct;
-
+    const { TotalPriceHandle } = props;
     const [singleProduct] = SingleProductApi(itemId);
+    const [Total, setTotal] = useState(0);
+
+    useEffect(() => {
+        if (singleProduct.CurrentPrice != null) {
+            setTotal(singleProduct.CurrentPrice * quantity);
+            TotalPriceHandle({ TotalPrice: singleProduct.CurrentPrice * quantity, itemId: itemId });
+        }
+
+    }, [singleProduct.CurrentPrice, quantity, Total])
+
+
+
+
+
 
 
     if (singleProduct.length <= 0)
@@ -17,6 +31,7 @@ function SideCartProductList(props) {
 
     return (
         <>
+
 
             <div className="">
                 <div className="row g-0">
@@ -36,10 +51,15 @@ function SideCartProductList(props) {
 
                                 <div>
                                     <i className="fs-5 text-danger fa-solid fa-trash"
-                                        onClick={() => cartDispatch({
-                                            type: 'REMOVE_FROM_CART',
-                                            itemId: itemId
-                                        })}
+                                        onClick={() => {
+                                            cartDispatch({
+                                                type: 'REMOVE_FROM_CART',
+                                                itemId: itemId
+                                            });
+
+
+                                        }
+                                        }
                                     ></i>
                                 </div>
 
@@ -50,10 +70,14 @@ function SideCartProductList(props) {
                                 <div className="d-flex  justify-content-start align-items-center">
 
                                     <button className=' btn '
-                                        onClick={() => cartDispatch({
-                                            type: 'DECREASE_QUANTITY',
-                                            itemId: itemId
-                                        })}
+                                        onClick={() => {
+                                            cartDispatch({
+                                                type: 'DECREASE_QUANTITY',
+                                                itemId: itemId
+                                            });
+
+                                        }
+                                        }
                                     >
                                         -
                                     </button>
@@ -61,10 +85,14 @@ function SideCartProductList(props) {
                                     <input readOnly className='  text-center form-control ' type="number" value={quantity} />
 
                                     <button className=' btn '
-                                        onClick={() => cartDispatch({
-                                            type: 'ADD_TO_CART',
-                                            itemId: itemId
-                                        })}
+                                        onClick={() => {
+                                            cartDispatch({
+                                                type: 'ADD_TO_CART',
+                                                itemId: itemId
+                                            });
+
+                                        }
+                                        }
                                     >
                                         +
                                     </button>
@@ -72,7 +100,11 @@ function SideCartProductList(props) {
                                 </div>
 
                                 <div>
-                                    <span>Total : ৳{(singleProduct.CurrentPrice * quantity)}</span>
+
+                                    <span>Total: ৳{
+                                        Total
+
+                                    }</span>
                                 </div>
 
                             </div>

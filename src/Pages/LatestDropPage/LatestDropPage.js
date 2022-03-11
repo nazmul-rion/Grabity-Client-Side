@@ -46,6 +46,7 @@ const LatestDropPage = () => {
                 <SideMenu />
             </div>
 
+
             <div style={{ backgroundColor: '#F1F1F1' }}>
                 <span className='ms-3'>{(pageNumber * pageSize) + 1}-{(pageNumber * pageSize) + products.length} of {totalProductCount} results found.</span>
             </div>

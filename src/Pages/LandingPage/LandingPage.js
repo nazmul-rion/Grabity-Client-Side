@@ -12,6 +12,7 @@ const LandingPage = () => {
             <div className="sidebar">
                 <SideMenu />
             </div>
+
             <div className="container-fluid">
                 <BannerSection />
             </div>

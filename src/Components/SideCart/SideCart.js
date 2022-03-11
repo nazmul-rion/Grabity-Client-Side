@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import useCart from '../../Context/CartManagement/useCart';
 import './SideCart.css'
 import SideCartProductList from './SideCartProductList';
 
 const SideCart = () => {
 
+    let navigate = useNavigate();
     const { cartState, cartDispatch } = useCart();
+    const [TotalPriceObj, setTotalPriceObj] = useState([]);
+
+    const TotalPriceHandle = (price) => {
+        const copyTotalPrice = [...TotalPriceObj];
+        const curItemIndex = copyTotalPrice.findIndex((i) => i.itemId === price.itemId);
+        if (curItemIndex < 0) {
+            copyTotalPrice.push(price);
+        } else {
+            const copyItem = { ...copyTotalPrice[curItemIndex] };
+            copyItem.TotalPrice = price.TotalPrice;
+            copyTotalPrice[curItemIndex] = copyItem;
+        }
+
+        setTotalPriceObj(copyTotalPrice)
+
+    }
+
+
+    let total = TotalPriceObj.reduce((a, b) => a + (b['TotalPrice'] || 0), 0);;
+
+
 
 
     return (
@@ -21,10 +44,13 @@ const SideCart = () => {
                 {
                     cartState.cartList.length > 0 ?
 
-                        cartState.cartList.map(SingleCartProduct => (
+                        cartState.cartList.map(SingleCartProduct =>
+                        (
                             <SideCartProductList
                                 SingleCartProduct={SingleCartProduct}
-                                key={SingleCartProduct.itemId}>
+                                key={SingleCartProduct.itemId}
+                                TotalPriceHandle={TotalPriceHandle}
+                            >
                             </SideCartProductList>
                         ))
                         :
@@ -35,7 +61,18 @@ const SideCart = () => {
                         </>
                 }
 
+                <div className='border border-2 border-dark ' />
 
+                {/* Total Price  */}
+
+                <div className="d-flex justify-content-between align-items-center my-3">
+                    <h5>Estimated Total:</h5>
+                    <h5 className='text-success'>৳{total}</h5>
+                </div>
+
+                <button className='btn btn-warning w-100 my-3'
+                    onClick={() => { navigate("/checkOutPage"); }}
+                >Check Out</button>
 
 
             </div>
