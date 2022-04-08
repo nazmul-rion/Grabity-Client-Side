@@ -7,9 +7,11 @@ import cart from '../../images/cart.svg'
 import catIcon from '../../images/CategoryIcon.svg'
 import useCart from '../../Context/CartManagement/useCart'
 import SideCart from '../SideCart/SideCart'
+import useAuth from '../../Context/Authentication/useAuth'
 
 const NavigationBar = () => {
 
+    const { user, signOutUser } = useAuth();
     let navigate = useNavigate();
 
     const { cartState, cartDispatch } = useCart();
@@ -56,6 +58,26 @@ const NavigationBar = () => {
                                     Cart
                                 </span>
                             </Nav.Link>
+
+                            {user.email ? (
+                                <>
+                                    <Navbar.Text>
+                                        <div className="d-flex align-items-center justify-content-start">
+                                            <img className="rounded rounded-circle mx-2" height="40" width="40" src={user.photoURL} alt="N/A" />
+                                            <i onClick={signOutUser} className="text-danger fs-5 fas fa-sign-out-alt"></i>{' '}
+                                        </div>
+                                    </Navbar.Text>
+                                </>
+                            ) : (
+                                <>
+                                    <Navbar.Text>
+                                        <div className="d-flex">
+                                            <button className="btn" onClick={() => navigate('/signin')}>Sign In</button>{' '}
+                                            <button className="btn" onClick={() => navigate('/signup')}>Sign Up</button>{' '}
+                                        </div>
+                                    </Navbar.Text>
+                                </>
+                            )}
 
 
 

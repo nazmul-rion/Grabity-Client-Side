@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
 import './ProductDetailsPage.css'
 import Rating from 'react-rating';
-import { useParams } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 import Slider from 'react-slick/lib/slider';
 import SideMenu from '../../Components/SideMenu/SideMenu';
 import useCart from '../../Context/CartManagement/useCart';
@@ -43,7 +42,9 @@ const ProductDetailsPage = () => {
                 <SideMenu />
             </div>
 
-            <div className="container-fluid">
+            {/* Product Details Section  */}
+
+            <section className="container-fluid">
                 <div className="row justify-content-center">
 
                     <div className=" col-md-6  d-flex justify-content-center align-items-center  border border-3 mx-5 my-3">
@@ -106,7 +107,23 @@ const ProductDetailsPage = () => {
                     </div>
 
                 </div>
-            </div>
+            </section>
+
+
+            <section className='productSubNav'>
+                <Link className='sublink' to='overview'>Overview</Link>
+                <Link className='sublink' to='details'>Details</Link>
+                <Link className='sublink' to='reviews'>Reviews</Link>
+                <Link className='sublink' to='photos'>Photos</Link>
+                <Link className='sublink' to='questionanswer'>Q&amp;A</Link>
+                <Link className='sublink' to='discussion'>Discussions &amp; Related polls</Link>
+
+            </section>
+
+
+            <section className='container-fluid'>
+                <Outlet />
+            </section>
 
 
 

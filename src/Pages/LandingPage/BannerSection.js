@@ -1,12 +1,19 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
+import useAuth from '../../Context/Authentication/useAuth';
 
 const BannerSection = () => {
+
+
+    const { signInWithGoogle, signInUser, error, user } = useAuth();
+
     return (
         <div>
 
             <div className="row" style={{ backgroundColor: "#E5E5E5" }}>
-                <div className="col-md-8">
+
+
+                <div className={` ${user.email ? "col-12" : "col-lg-8"}`} >
                     <Carousel variant="dark">
                         <Carousel.Item interval={2000}>
                             <img
@@ -44,39 +51,56 @@ const BannerSection = () => {
                     </Carousel>
                 </div>
 
-                <div className="mt-2 col-md-4 align-items-center justify-content-center d-flex flex-column">
-                    <h3 className='text-center font-sansation'>
-                        We welcome <br /> you to <br /> our community <br /> driven market
-                    </h3>
-                    <input className='form-control border border-3 m-2 px-2' type="text" placeholder='Email Address' />
 
-                    <div className="container">
-                        <div className='d-flex justify-content-between align-items-center'>
-                            <hr size="5" className='orhr' />
-                            <span className='px-2'>OR</span>
-                            <hr size="5" className='orhr' />
-                        </div>
-                    </div>
+                {
 
-                    <div className="d-flex my-2">
-                        <button className='facebookbtn'>
-                            <div className="d-flex align-items-center">
-                                <i className="fa-brands fs-2 fa-facebook-square"></i><span>Facebook</span>
+                    user.email ?
+                        (
+                            <div className="mt-2 col-md-4 align-items-center justify-content-center d-flex flex-column">
                             </div>
-                        </button>
-                        <button className='googlebtn'>
-                            <div className="d-flex align-items-center">
-                                <i className="fa-brands fa-google-plus-square fs-2"></i><span>Google</span>
+                        )
+                        :
+                        (
+                            <div className="mt-2 col-md-4 align-items-center justify-content-center d-flex flex-column">
+                                <h3 className='text-center font-sansation'>
+                                    We welcome <br /> you to <br /> our community <br /> driven market
+                                </h3>
+                                <input className='form-control border border-3 m-2 px-2' type="text" placeholder='Email Address' />
+
+                                <div className="container">
+                                    <div className='d-flex justify-content-between align-items-center'>
+                                        <hr size="5" className='orhr' />
+                                        <span className='px-2'>OR</span>
+                                        <hr size="5" className='orhr' />
+                                    </div>
+                                </div>
+
+                                <div className="d-flex my-2">
+                                    <button className='facebookbtn'>
+                                        <div className="d-flex align-items-center">
+                                            <i className="fa-brands fs-2 fa-facebook-square"></i><span>Facebook</span>
+                                        </div>
+                                    </button>
+                                    <button className='googlebtn' onClick={signInWithGoogle}>
+                                        <div className="d-flex align-items-center">
+                                            <i className="fa-brands fa-google-plus-square fs-2"></i><span>Google</span>
+                                        </div>
+                                    </button>
+                                    <button className='twitterbtn'>
+                                        <div className="d-flex align-items-center">
+                                            <i className="fa-brands fs-2 fa-twitter-square"></i><span>Twitter</span>
+                                        </div>
+                                    </button>
+                                </div>
+                                <a className='text-muted mb-3'>Why you need an account to explore?</a>
                             </div>
-                        </button>
-                        <button className='twitterbtn'>
-                            <div className="d-flex align-items-center">
-                                <i className="fa-brands fs-2 fa-twitter-square"></i><span>Twitter</span>
-                            </div>
-                        </button>
-                    </div>
-                    <a className='text-muted mb-3'>Why you need an account to explore?</a>
-                </div>
+
+                        )
+
+                }
+
+
+
             </div>
 
         </div >
