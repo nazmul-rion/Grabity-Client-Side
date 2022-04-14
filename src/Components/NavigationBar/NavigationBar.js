@@ -49,7 +49,26 @@ const NavigationBar = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link className='mx-2' >Select <br /> Language</Nav.Link>
-                            <Nav.Link className='mx-2' >Accounts <br />Log in or Sign up</Nav.Link>
+
+                            {user.email ? (
+                                <>
+
+                                    <Navbar.Text>
+                                        <div className="d-flex align-items-center justify-content-start">
+                                            <img className="rounded rounded-circle" height="40" width="40" src={user.photoURL} alt="N/A" />
+                                            <div className='mx-2'>{user.displayName}</div>
+                                            <i onClick={signOutUser} className="text-danger fs-5 fas fa-sign-out-alt"></i>{' '}
+                                        </div>
+                                    </Navbar.Text>
+                                </>
+                            ) : (
+                                <>
+                                    <Nav.Link className='mx-2' >Accounts <br /><span onClick={() => navigate('/signin')}>Log in</span> or <span onClick={() => navigate('/signup')}>Sign up</span></Nav.Link>
+
+                                </>
+                            )}
+
+
                             <Nav.Link className='mx-2' >Returns & <br></br> Orders</Nav.Link>
                             <Nav.Link className='mx-3' data-bs-toggle="offcanvas" data-bs-target="#SideCart" aria-controls="offcanvasRight" >
                                 <span className='cartCounter'>{cartState.cartList.length}</span>
@@ -58,27 +77,6 @@ const NavigationBar = () => {
                                     Cart
                                 </span>
                             </Nav.Link>
-
-                            {user.email ? (
-                                <>
-                                    <Navbar.Text>
-                                        <div className="d-flex align-items-center justify-content-start">
-                                            <img className="rounded rounded-circle mx-2" height="40" width="40" src={user.photoURL} alt="N/A" />
-                                            <i onClick={signOutUser} className="text-danger fs-5 fas fa-sign-out-alt"></i>{' '}
-                                        </div>
-                                    </Navbar.Text>
-                                </>
-                            ) : (
-                                <>
-                                    <Navbar.Text>
-                                        <div className="d-flex">
-                                            <button className="btn" onClick={() => navigate('/signin')}>Sign In</button>{' '}
-                                            <button className="btn" onClick={() => navigate('/signup')}>Sign Up</button>{' '}
-                                        </div>
-                                    </Navbar.Text>
-                                </>
-                            )}
-
 
 
 

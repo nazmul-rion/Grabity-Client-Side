@@ -1,62 +1,63 @@
-
-.ProductCard .card{
+.ProductCard .card {
   background-color: #F1F1F1;
 }
 
-.productImage{
+.productImage {
   border: 6px solid #FFFFFF;
   margin: 0 24px;
 }
 
-.productCategoryName{
+.productCategoryName {
   font-size: 10px;
   color: #000000;
-  opacity:  0.58;
+  opacity: 0.58;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
 
-.productName{
-  font-size: 21px;
+.productName {
+  font-size: 1.1rem;
   color: #000000;
-  opacity:  0.58;
-  font-weight: 400;
-  font-family: 'Roboto', sans-serif;
-}
-.productPrice{
-  font-size:2rem;
-  color: #000000;
-  opacity:  0.58;
+  opacity: 0.58;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
 
-.productPreviousPrice{
-  font-size: 21px;
+.productPrice {
+  font-size: 1.2rem;
   color: #000000;
-  opacity:  0.58;
+  opacity: 0.58;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
 
-.soldunit{
+.productPreviousPrice {
+  font-size: 1rem;
+  color: #000000;
+  opacity: 0.58;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.soldunit {
   font-size: 10px;
   color: #000000;
-  opacity:  0.58;
+  opacity: 0.58;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
-.ratingEmpty{
-color: black;
-font-size: 14px;
-}
 
-.ratingFull{
+.ratingEmpty {
   color: black;
   font-size: 14px;
 }
 
-.seeMoreBtn{
+.ratingFull {
+  color: black;
+  font-size: 14px;
+}
+
+.seeMoreBtn {
   background-color: #F3970C;
   border: 7px solid #F3970C;
   font-size: 1.18rem;
