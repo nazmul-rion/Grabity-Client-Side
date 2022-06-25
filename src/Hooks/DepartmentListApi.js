@@ -5,7 +5,7 @@ const DepartmentListApi = () => {
     const [departmentList, setDepartment] = useState([]);
     useEffect(() => {
         let isMounted = true;
-        fetch('https://grabity-grabity.herokuapp.com/departments')
+        fetch(`${process.env.REACT_APP_HEROKU_URL}/departments`)
             .then(res => res.json())
             .then(data => {
                 if (isMounted) {

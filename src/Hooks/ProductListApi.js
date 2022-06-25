@@ -9,7 +9,7 @@ const ProductListApi = () => {
 
     useEffect(() => {
         let isMounted = true;
-        fetch(`https://grabity-grabity.herokuapp.com/products?pageNumber=${pageNumber}&&pageSize=${pageSize}`)
+        fetch(`${process.env.REACT_APP_HEROKU_URL}/products?pageNumber=${pageNumber}&&pageSize=${pageSize}`)
             .then(res => res.json())
             .then(data => {
                 if (isMounted) {

@@ -9,10 +9,11 @@ const FeatureProductSection = () => {
 
     const [products] = ProductListApi();
 
-
+    const [showBtn, setShowBtn] = useState(true);
     const [seeMorePagination, setSeeMorePagination] = useState(8);
     const seeMoreButtonHandle = () => {
         setSeeMorePagination(prevValue => prevValue + 8);
+        seeMorePagination > products.length ? setShowBtn(false) : setShowBtn(true);
     }
 
 
@@ -35,13 +36,15 @@ const FeatureProductSection = () => {
                 }
             </div>
 
-            <div className="container py-5">
-                <div className='d-flex justify-content-between align-items-center'>
-                    <hr size="5" className='orangehr' />
-                    <button className='seeMoreBtn' onClick={seeMoreButtonHandle}>See More</button>
-                    <hr size="5" className='orangehr' />
+            {
+                showBtn && <div className="container py-5">
+                    <div className='d-flex justify-content-between align-items-center'>
+                        <hr size="5" className='orangehr' />
+                        <button className='seeMoreBtn' onClick={seeMoreButtonHandle}>See More</button>
+                        <hr size="5" className='orangehr' />
+                    </div>
                 </div>
-            </div>
+            }
 
 
         </div>

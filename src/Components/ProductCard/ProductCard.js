@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 
 const ProductCard = (props) => {
 
-    const { _id, ProductName, ProductPhoto, CategoryName, SubCategory, Brand, CurrentPrice, PreviousPrice, ProductRating, NumberOfRaters, TotalUnits, SoldUnits } = props.products;
+    const { _id, ProductName, ProductPhoto, CategoryName, SubCategory, Brand, CurrentPrice, PreviousPrice, ProductRating, NumberOfRaters, TotalUnits, SoldUnits, Overview } = props.products;
 
 
     return (
@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                     </div>
                 </div>
 
-                <Link className='text-decoration-none text-dark' to={`/productdetails/${_id}`}>
+                <Link className='text-decoration-none text-dark' to={`/productdetails/${_id}/overview`} state={{ ProductOverview: Overview }}>
                     <div className="productImage">
                         <img src={ProductPhoto[0]} className="card-img-top" alt={ProductName} />
                     </div>

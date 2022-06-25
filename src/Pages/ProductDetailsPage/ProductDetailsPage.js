@@ -113,10 +113,10 @@ const ProductDetailsPage = () => {
             <section className='productSubNav'>
                 <Link className='sublink' to='overview' state={{ ProductOverview: singleProduct?.Overview }}>Overview</Link>
                 <Link className='sublink' to='details' state={{ ProductDetails: singleProduct?.Details }}>Details</Link>
-                <Link className='sublink' to='reviews'>Reviews</Link>
+                <Link className='sublink' to='reviews' state={{ ProductRating: singleProduct?.ProductRating, NumberOfRaters: singleProduct?.NumberOfRaters, ProductID: singleProduct?._id }}>Reviews</Link>
                 <Link className='sublink' to='photos'>Photos</Link>
-                <Link className='sublink' to='questionanswer'>Q&amp;A</Link>
-                <Link className='sublink' to='discussion'>Discussions &amp; Related polls</Link>
+                <Link className='sublink' to='questionanswer' state={{ ProductID: singleProduct?._id }}>Question &amp; Answer</Link>
+                {/* <Link className='sublink' to='discussion'>Discussions &amp; Related polls</Link> */}
 
             </section>
 

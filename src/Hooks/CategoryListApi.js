@@ -7,7 +7,7 @@ const CategoryListApi = () => {
 
     useEffect(() => {
         let isMounted = true;
-        fetch('https://grabity-grabity.herokuapp.com/categories')
+        fetch(`${process.env.REACT_APP_HEROKU_URL}/categories`)
             .then(res => res.json())
             .then(data => {
                 if (isMounted) {

@@ -115,6 +115,7 @@ const useFirebase = () => {
         admin,
         error,
         loading,
+        setLoading,
         signUpUser,
         signInUser,
         signInWithGoogle,

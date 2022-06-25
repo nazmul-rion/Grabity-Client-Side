@@ -1,9 +1,8 @@
-
-.productPhoto{
+.productPhoto {
     height: 400px;
 }
 
-.productSubNav{
+.productSubNav {
     border-top: 2px solid #C4C4C4;
     border-bottom: 2px solid #C4C4C4;
     display: flex;
@@ -15,7 +14,7 @@
 }
 
 .productSubNav .sublink {
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: black;
     opacity: 0.74;
@@ -23,8 +22,8 @@
 }
 
 @media only screen and (max-width: 700px) {
-.productPhoto{
-    height: 300px;
-}
+    .productPhoto {
+        height: 300px;
+    }
 
 }

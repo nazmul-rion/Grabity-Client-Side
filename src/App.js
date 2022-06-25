@@ -6,14 +6,15 @@ import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 import AuthProvider from './Context/Authentication/AuthProvider';
 import CartProvider from './Context/CartManagement/CartProvider';
 import CategoryListingPage from './Pages/CategoryListingPage/CategoryListingPage';
+import CheckOutPage from './Pages/CheckOutPage/CheckOutPage';
 import LandingPage from './Pages/LandingPage/LandingPage';
 import LatestDropPage from './Pages/LatestDropPage/LatestDropPage';
 import DetailsSection from './Pages/ProductDetailsPage/OutletOfProduct/DetailsSection';
 import DiscussionSection from './Pages/ProductDetailsPage/OutletOfProduct/DiscussionSection';
 import OverViewSection from './Pages/ProductDetailsPage/OutletOfProduct/OverViewSection';
 import PhotosSection from './Pages/ProductDetailsPage/OutletOfProduct/PhotosSection';
-import QuestionAnswerSection from './Pages/ProductDetailsPage/OutletOfProduct/QuestionAnswerSection';
-import ReviewsSection from './Pages/ProductDetailsPage/OutletOfProduct/ReviewsSection';
+import QuestionAnswerSection from './Pages/ProductDetailsPage/OutletOfProduct/QuestionAnswerSection/QuestionAnswerSection';
+import ReviewsSection from './Pages/ProductDetailsPage/OutletOfProduct/ReviewsSection/ReviewsSection';
 import ProductDetailsPage from './Pages/ProductDetailsPage/ProductDetailsPage';
 import SigninPage from './Pages/SigninPage/SigninPage';
 import SignupPage from './Pages/SignupPage/SignupPage';
@@ -38,6 +39,9 @@ function App() {
               <Route path="discussion" element={<DiscussionSection />} />
 
             </Route>
+
+            <Route path="checkOutPage" element={<CheckOutPage />} />
+
             <Route path="signin" element={<SigninPage />} />
             <Route path="signup" element={<SignupPage />} />
             <Route path="*" element={<NotFoundPage />} />

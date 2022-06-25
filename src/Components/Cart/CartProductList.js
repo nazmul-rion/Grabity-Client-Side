@@ -3,7 +3,7 @@ import useCart from '../../Context/CartManagement/useCart';
 import SingleProductApi from '../../Hooks/SingleProductApi';
 import CustomSpinner from '../Spinner/CustomSpinner';
 
-function SideCartProductList(props) {
+function CartProductList(props) {
 
     const { cartDispatch } = useCart();
 
@@ -34,11 +34,11 @@ function SideCartProductList(props) {
 
 
             <div className="">
-                <div className="row g-0">
+                <div className="row g-0 align-items-center justify-content-center">
                     <div className="col-md-4 border d-flex align-items-center justify-content-center">
-                        <img src={singleProduct.ProductPhoto ? singleProduct.ProductPhoto[0] : ''} className="img-fluid rounded-start" alt={singleProduct.ProductName} />
+                        <img src={singleProduct.ProductPhoto ? singleProduct.ProductPhoto[0] : ''} width="100vh" className="img-fluid rounded-start" alt={singleProduct.ProductName} />
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-8 ">
                         <div className="card-body">
                             <div className="d-flex justify-content-between align-items-center">
 
@@ -132,4 +132,4 @@ function SideCartProductList(props) {
     )
 }
 
-export default SideCartProductList
+export default CartProductList
